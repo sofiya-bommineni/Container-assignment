@@ -1,0 +1,18 @@
+-- create the database
+CREATE DATABASE vaccination;
+
+-- use the database
+USE vaccination;
+
+-- create the table
+CREATE TABLE students (
+  RegNo INT PRIMARY KEY,
+  Name VARCHAR(255) NOT NULL,
+  Vaccination_Status ENUM('Yes', 'No') NOT NULL
+);
+
+-- insert sample data
+INSERT INTO students (RegNo, Name, Vaccination_Status)
+VALUES (123456, 'John Smith', 'Yes'),
+       (234567, 'Jane Doe', 'No'),
+       (345678, 'Bob Johnson', 'Yes');
